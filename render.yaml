@@ -1,0 +1,21 @@
+version: 1
+services:
+  - type: docker
+    name: keycloak
+    env: docker
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: KEYCLOAK_USER
+        value: admin
+      - key: KEYCLOAK_PASSWORD
+        value: admin@123
+      - key: DB_VENDOR
+        value: h2
+      - key: KC_HTTPS_PORT
+        value: "9080"
+      - key: KC_HTTPS_KEYSTORE
+        value: /opt/keycloak/keycloak.jks
+      - key: KC_HTTPS_KEYSTORE_PASSWORD
+        value: Password#123
