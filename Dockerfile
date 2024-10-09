@@ -5,10 +5,11 @@ FROM quay.io/keycloak/keycloak:latest
 ENV KEYCLOAK_USER=admin
 ENV KEYCLOAK_PASSWORD=admin@123
 ENV KC_HTTPS_PORT=9080
+ENV KC_HTTP_PORT=9443
 
 # Expose the HTTPS port
 EXPOSE 9080
-
+EXPOSE 9443
 # Copy the keystore into the Keycloak container
 COPY keycloak.jks /opt/keycloak/keycloak.jks
 
