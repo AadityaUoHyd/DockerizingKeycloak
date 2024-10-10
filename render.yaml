@@ -19,6 +19,3 @@ services:
         value: /opt/keycloak/keycloak.jks
       - key: KC_HTTPS_KEYSTORE_PASSWORD
         value: Password#123
-    services:
-      - port: 9080
-        autoRedirectHttp: true
