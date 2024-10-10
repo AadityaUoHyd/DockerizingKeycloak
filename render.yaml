@@ -15,8 +15,6 @@ services:
         value: h2
       - key: KC_HTTPS_PORT
         value: "9080"
-      - key: KC_HTTPS_PORT
-        value: "9443"
       - key: KC_HTTPS_KEYSTORE
         value: /opt/keycloak/keycloak.jks
       - key: KC_HTTPS_KEYSTORE_PASSWORD
