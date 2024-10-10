@@ -13,7 +13,7 @@ services:
         value: admin@123
       - key: DB_VENDOR
         value: h2
-      - key: KC_HTTPS_PORT
+      - key: KC_HTTP_PORT
         value: "9080"
       - key: KC_HTTPS_KEYSTORE
         value: /opt/keycloak/keycloak.jks
