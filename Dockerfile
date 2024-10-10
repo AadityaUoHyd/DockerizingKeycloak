@@ -17,4 +17,4 @@ ENV KC_HTTPS_KEYSTORE=/opt/keycloak/keycloak.jks
 ENV KC_HTTPS_KEYSTORE_PASSWORD=Password#123
 
 # Run Keycloak in production mode with HTTPS
-ENTRYPOINT ["kc.sh", "start", "--https-port=9080", "--http-address=0.0.0.0", "--optimized"]
+ENTRYPOINT ["kc.sh", "start", "--https-port=9080", "--https-address=0.0.0.0", "--optimized"]
