@@ -5,11 +5,10 @@ FROM quay.io/keycloak/keycloak:latest
 ENV KEYCLOAK_USER=admin
 ENV KEYCLOAK_PASSWORD=admin@123
 ENV KC_HTTPS_PORT=9080
-ENV KC_HTTP_PORT=9443
 
 # Expose the HTTPS port
 EXPOSE 9080
-EXPOSE 9443
+
 # Copy the keystore into the Keycloak container
 COPY keycloak.jks /opt/keycloak/keycloak.jks
 
@@ -18,4 +17,4 @@ ENV KC_HTTPS_KEYSTORE=/opt/keycloak/keycloak.jks
 ENV KC_HTTPS_KEYSTORE_PASSWORD=Password#123
 
 # Run Keycloak in production mode with HTTPS
-ENTRYPOINT ["kc.sh", "start", "--https-port=9080", "--optimized"]
+ENTRYPOINT ["kc.sh", "start", "--https-port=9080", "--http-address=0.0.0.0", "--optimized"]
