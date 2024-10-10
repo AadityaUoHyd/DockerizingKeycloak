@@ -13,7 +13,7 @@ EXPOSE 9080
 COPY keycloak.jks /opt/keycloak/keycloak.jks
 
 # Set the SSL keystore location and password
-ENV KC_HTTPS_KEYSTORE=/opt/keycloak/keycloak.jks
+ENV KC_HTTPS_KEYSTORE=https://aadichatterbox-keycloak.onrender.com:/opt/keycloak/keycloak.jks
 ENV KC_HTTPS_KEYSTORE_PASSWORD=Password#123
 
 # Run Keycloak in production mode with HTTPS
